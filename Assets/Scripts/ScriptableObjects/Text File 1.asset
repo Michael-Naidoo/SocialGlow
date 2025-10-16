@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
+  m_Name: Text File 1
+  m_EditorClassIdentifier: 
+  opener: What do you think about the government's response to the pandemic?
+  playerOptions:
+  - I don't really have an opinion on it.
+  - It was a complete disaster.
+  - I think they did their best.
+  response:
+  - Fair enough. It was a lot to keep track of.
+  - That's a strong take. What made you feel it was a disaster?
+  - You're more forgiving than some. What do you think they got right?
+  PlayerResponsesStrings1:
+  - I just don't care.
+  - I mean, I do, but not that much.
+  - I actually do care, but it's a stressful topic so I try to stay away.
+  PlayerResponsesStrings2:
+  - The constant rule changes were frustrating.
+  - They never should have shut everything down.
+  - They didn't act fast enough to stop the spread.
+  PlayerResponsesStrings3:
+  - They distributed vaccines quickly.
+  - They tried to help the economy with stimulus checks.
+  - The leaders were just trying to follow the science.

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
+  m_Name: Text File 3
+  m_EditorClassIdentifier: 
+  opener: How do you feel about the Black Lives Matter movement?
+  playerOptions:
+  - It's a divisive and harmful movement that has caused a lot of trouble.
+  - I've heard different things about it. What's the main point?
+  - I fully support the cause and think it's a vital movement.
+  response:
+  - I've heard people say that. What do you think makes it so divisive?
+  - At its core, it's about raising awareness of systemic racism and police brutality.
+  - That's great. What part of their message resonates with you most?
+  PlayerResponsesStrings1:
+  - It's a complete joke. It's just a bunch of people looking for an excuse to riot
+    and get a handout.
+  - "I feel like it\u2019s been turned into a political weapon. It's not about helping
+    people anymore; it's about pushing an agenda."
+  - The movement has some good intentions, but some of the followers are just so
+    aggressive and angry. They alienate a lot of people who would otherwise support
+    the cause.
+  PlayerResponsesStrings2:
+  - '"Systemic racism" is just a buzzword. It''s a made-up problem to justify why
+    some people can''t succeed.'
+  - That's one way to see it, I guess. But I think it's more complicated than that,
+    and a lot of the stories are exaggerated.
+  - Yes, exactly! It's a critical step in bringing these injustices to light so we
+    can finally address them.
+  PlayerResponsesStrings3:
+  - Honestly, I don't know if I agree with any of it. I think it's a dangerous idea
+    that's making people hate each other more.
+  - I like that it's getting people to talk about uncomfortable issues. The conversation
+    is a good first step, even if it's messy.
+  - Every part of it resonates with me. The movement is a powerful and necessary
+    force for good, and I fully believe in its mission for true equality.

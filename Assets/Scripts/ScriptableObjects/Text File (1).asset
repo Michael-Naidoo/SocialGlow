@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
+  m_Name: Text File (1)
+  m_EditorClassIdentifier: 
+  opener: Have you heard about the Charlie Kirt shooting?
+  playerOptions:
+  - I dont really care for stuff like that.
+  - No I havent. What Happened?
+  - 'Yea I did. '
+  response:
+  - I see... Do you just not care or?
+  - He was shot giving a speech at UVU.
+  - What did you think about it?
+  PlayerResponsesStrings1:
+  - I just dont care.
+  - I mean I do, but not that much.
+  - I actually do care, but its triggering so i try to stay away.
+  PlayerResponsesStrings2:
+  - I see. Why would I care about that?
+  - That must have been traumatising for the students.
+  - I feel bad for the students, but he had it coming.
+  PlayerResponsesStrings3:
+  - The shooter needs to get shot, Charlie didnt deserve that.
+  - I think that reguardless of the motivs, we cant delve into killing people.
+  - He deserved it, but everyone who saw didnt need to se him get shot.

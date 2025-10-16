@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
+  m_Name: Text File
+  m_EditorClassIdentifier: 
+  opener: Have you heard about the January 6th Capitol attack?
+  playerOptions:
+  - I don't really care for stuff like that.
+  - No, I haven't. What happened?
+  - Yeah, I did.
+  response:
+  - Oh, okay. I get it. Some topics are just too much.
+  - It was when a large mob broke into the U.S. Capitol building. It was a pretty
+    wild scene.
+  - So you know. What did you think about the people involved?
+  PlayerResponsesStrings1:
+  - I just don't care.
+  - I mean, I do, but not that much.
+  - "I actually do care, but it\u2019s triggering so I try to stay away."
+  PlayerResponsesStrings2:
+  - So, they just broke in? Why?
+  - Was anyone hurt?
+  - That must have been terrifying for the people inside.
+  PlayerResponsesStrings3:
+  - 'I think they should be punished.  '
+  - 'It was a chaotic situation that got out of hand.  '
+  - I think they were right to protest.

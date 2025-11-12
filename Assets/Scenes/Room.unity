@@ -1208,7 +1208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayCycleData:
   - {fileID: 11400000, guid: 7ac3062e46de1ec49adebe03326427bb, type: 2}
-  - {fileID: 11400000, guid: 7ac3062e46de1ec49adebe03326427bb, type: 2}
 --- !u!1 &711777497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

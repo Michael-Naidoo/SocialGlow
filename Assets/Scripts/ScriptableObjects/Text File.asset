@@ -12,25 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
   m_Name: Text File
   m_EditorClassIdentifier: 
-  opener: Have you heard about the January 6th Capitol attack?
+  opener: 'The greatest debate of our time: Is blue or red fundamentally the superior
+    color?'
   playerOptions:
-  - I don't really care for stuff like that.
-  - No, I haven't. What happened?
-  - Yeah, I did.
+  - It's a stupid argument. Neither color is any good; they're both too basic.
+  - "That\u2019s an odd thing to debate. What makes one \"superior\" to the other?"
+  - Obviously, red is the superior color, the one true champion of the spectrum.
   response:
-  - Oh, okay. I get it. Some topics are just too much.
-  - It was when a large mob broke into the U.S. Capitol building. It was a pretty
-    wild scene.
-  - So you know. What did you think about the people involved?
+  - Oh, a color nihilist! What colors, then, do you deem worthy of existence?
+  - It's about fundamental aesthetic superiority, of course. For instance, which
+    one holds more historical weight?
+  - A person of culture, I see! But why do you feel that red dominates the entire
+    visible light spectrum?
   PlayerResponsesStrings1:
-  - I just don't care.
-  - I mean, I do, but not that much.
-  - "I actually do care, but it\u2019s triggering so I try to stay away."
+  - Any color is better than those two overrated hues. They just scream 'corporate
+    logo.'
+  - I don't think any colors are 'bad,' but I prefer greens and yellows for the vibes.
+  - "Blue is the true king! Red is only popular because it\u2019s a cheap attention-grabber."
   PlayerResponsesStrings2:
-  - So, they just broke in? Why?
-  - Was anyone hurt?
-  - That must have been terrifying for the people inside.
+  - The concept of 'historical weight' is meaningless. They're just wavelengths of
+    light.
+  - Is it about psychology then? Doesn't blue imply calm, and red imply danger?
+  - Red is clearly the color of passion and power. It's inherently more significant
+    than blue.
   PlayerResponsesStrings3:
-  - 'I think they should be punished.  '
-  - 'It was a chaotic situation that got out of hand.  '
-  - I think they were right to protest.
+  - Red is actually quite vulgar. It's loud, angry, and has very poor emotional depth.
+  - I like red, but isn't blue more popular in the corporate world? That must count
+    for something.
+  - Red is the color of fire, love, and stop signs! It literally dictates human action.
+    It is supreme.

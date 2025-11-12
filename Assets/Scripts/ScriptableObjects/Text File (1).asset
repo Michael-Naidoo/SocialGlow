@@ -12,24 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
   m_Name: Text File (1)
   m_EditorClassIdentifier: 
-  opener: Have you heard about the Charlie Kirt shooting?
+  opener: 'We need to settle this: What is the most aggressively uncomfortable piece
+    of seating ever invented?'
   playerOptions:
-  - I dont really care for stuff like that.
-  - No I havent. What Happened?
-  - 'Yea I did. '
+  - All chairs are bad, they're unnatural traps for the human spine.
+  - That depends entirely on the context. Are we talking about function or material?
+  - Clearly, the metal folding chair is the champion of spinal misery.
   response:
-  - I see... Do you just not care or?
-  - He was shot giving a speech at UVU.
-  - What did you think about it?
+  - A bold anti-chair stance! So, you prefer the rugged comfort of the floor?
+  - 'A nuanced take! Let''s narrow it down: which one is the most deliberately hostile
+    to the sitter?'
+  - Ah, a classic choice! But tell me, is the cold of the metal or the pinch of the
+    hinge the primary source of its evil?
   PlayerResponsesStrings1:
-  - I just dont care.
-  - I mean I do, but not that much.
-  - I actually do care, but its triggering so i try to stay away.
+  - Standing is the only acceptable option. Chairs have ruined productivity for centuries.
+  - I think chairs are fine, just overrated. A stool is often more efficient.
+  - The floor is terrible. A good chair is a necessity, like a decent water filter.
   PlayerResponsesStrings2:
-  - I see. Why would I care about that?
-  - That must have been traumatising for the students.
-  - I feel bad for the students, but he had it coming.
+  - The 'hostile' chair is the one that's too soft, lulling you into a productivity
+    coma.
+  - "The worst chair is any antique dining chair\u2014they're just glorified wooden
+    thrones."
+  - The folding chair, no doubt. It embodies impermanence and is architecturally
+    painful.
   PlayerResponsesStrings3:
-  - The shooter needs to get shot, Charlie didnt deserve that.
-  - I think that reguardless of the motivs, we cant delve into killing people.
-  - He deserved it, but everyone who saw didnt need to se him get shot.
+  - The folding chair is a rookie's choice. The true discomfort champion is the beanbag.
+  - The plastic patio chair is worse. The little holes leave strange indentations
+    on your legs.
+  - The folding chair reigns supreme! It's a cruel, unforgiving monument to temporary
+    seating.

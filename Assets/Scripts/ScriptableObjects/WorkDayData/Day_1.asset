@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d68d0da6ba4f9fbeeebe497b5ba720, type: 3}
+  m_Name: Day_1
+  m_EditorClassIdentifier: 
+  dayNumber: 1
+  dailyTheme: '"Colour"'
+  dailyPosts:
+  - {fileID: 11400000, guid: fbe63ee5032c27d4baf5fee14f23159a, type: 2}
+  - {fileID: 11400000, guid: e7863d17430f7c246b22daa385ac6ca1, type: 2}
+  workNPCName: Jonnothan
+  npcOpeningDialogue: Hey, Did you see that post about red being the better colour?
+    What did you think about it?
+  choiceOptions:
+  - choiceText: Its insane. That AI can say what it wants but green will be green,
+      and red will be red.
+    effect:
+      socialChange: 10
+      professionalChange: -5
+      isNeutralChoice: 0
+    followUpComment: Thats exactly what im thinking, I like you a little more now.
+  - choiceText: I dont really care, its an AI, its gonna say some shit. Im just gonna
+      keep my nose clean on this one.
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Yea well i guess being neutral isnt bad, but personally i dont
+      agree with it.
+  - choiceText: I totaly agree with it, I love the change and im sure the people
+      in charge have great plans for this swap.
+    effect:
+      socialChange: -5
+      professionalChange: 10
+      isNeutralChoice: 0
+    followUpComment: Well I hate it. Its just stupid, how could you agree with such
+      a drastic change to such a fundimental thing.
+  townNPCName: Tony
+  townNPCDialogue: 'Hey you. Yes You.
+
+    Did you see that the AI is saying that
+    Purple is the new best fashion colour? I personally hate it. I LOVE Gold!'
+  townChoiceOptions:
+  - choiceText: Nah, I love purple, Im so glad the AI finally agrees with me. Gold
+      is disgusting.
+    effect:
+      socialChange: -5
+      professionalChange: 10
+      isNeutralChoice: 0
+    followUpComment: Ew, I dont like you, go away.
+  - choiceText: Oh I also love Gold, I HATE that the new best fashion colour is Purple.
+    effect:
+      socialChange: 10
+      professionalChange: -5
+      isNeutralChoice: 0
+    followUpComment: We should just keep wearing Gold regardless.
+  - choiceText: I like both colours, so Im not too upset about the change, it is
+      a little annoying though that ill have to change up my wardrobe a bit though.
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Yea... Well im not changing one bit.
+  billboardText: 
+  vendorDialogue: 

@@ -12,25 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
   m_Name: Text File 2
   m_EditorClassIdentifier: 
-  opener: What's your take on the ongoing war in Ukraine?
+  opener: 'The most crucial breakfast debate: Is it acceptable for cereal to be soggy,
+    or must it remain crunchy to the very end?'
   playerOptions:
-  - I don't really follow international news.
-  - It's a tragedy.
-  - It's complicated, I don't know who to support.
+  - Cereal itself is a barbaric way to start the day. Why are we even discussing
+    this?
+  - It really depends on the cereal, doesn't it? Some are built for sogginess.
+  - Crunchy or bust! Any hint of sogginess means failure.
   response:
-  - A lot of people feel that way. It's tough to keep up.
-  - It's absolutely heartbreaking. What aspect of it affects you the most?
-  - I understand that. It's not a simple situation. What makes it so complex for
-    you?
+  - A purist, I see! So, you prefer to wrestle with a full English breakfast at dawn,
+    then?
+  - A pragmatic approach! But which specific cereals, in your expert opinion, have
+    mastered the art of the intentional mush?
+  - A fellow defender of textural integrity! But at what point does "slightly softened"
+    cross the unforgivable line into "disgracefully limp"?
   PlayerResponsesStrings1:
-  - I just don't care.
-  - I mean, I do, but not that much.
-  - I actually do care, but it's a very depressing topic so I try to stay away.
+  - Breakfast should be liquid. Solids are too much effort.
+  - Cereal has its place, but it's not for breakfast. Maybe a late-night snack.
+  - Nonsense! Cereal is the cornerstone of modern society. You just haven't found
+    the right bowl.
   PlayerResponsesStrings2:
-  - Seeing all the ruined buildings and cities.
-  - The stories of people losing their homes.
-  - The impact it has on the whole world.
+  - All cereal is a betrayal. It promises crunch but delivers goo.
+  - Cornflakes are meant to be eaten fast. But oatmeal is designed for absorption.
+  - Crunchy cereal offers a satisfying sensory experience. It's about the journey,
+    not just the destination.
   PlayerResponsesStrings3:
-  - I don't know who to trust for information.
-  - It feels like there are no good guys and bad guys.
-  - I don't think it's our place to get involved.
+  - Soggy cereal is an abomination! It shows a fundamental lack of respect for the
+    grain.
+  - I don't mind a little sogginess. It allows the flavors to truly meld with the
+    milk.
+  - The crunch defines the experience! It's the sound of breakfast triumph, the texture
+    of ultimate superiority.

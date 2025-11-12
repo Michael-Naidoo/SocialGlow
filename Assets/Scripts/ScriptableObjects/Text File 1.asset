@@ -12,24 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a24591e3a91394f8f0f179d66971a9, type: 3}
   m_Name: Text File 1
   m_EditorClassIdentifier: 
-  opener: What do you think about the government's response to the pandemic?
+  opener: Forget the food. Which fast-food mascot is the most culturally dominant
+    and therefore the best?
   playerOptions:
-  - I don't really have an opinion on it.
-  - It was a complete disaster.
-  - I think they did their best.
+  - They're all terrible, low-budget nightmares designed to sell you junk food.
+  - How do we define "best"? Is it marketability, design, or sheer creepiness?
+  - The King (Burger King) is the clear winner. His silent, unsettling aura is genius.
   response:
-  - Fair enough. It was a lot to keep track of.
-  - That's a strong take. What made you feel it was a disaster?
-  - You're more forgiving than some. What do you think they got right?
+  - Harsh! Even the most cynical marketing executive would object. Which one is the
+    least effective horror?
+  - An excellent question. Let's go with the one who has the most profound, yet deeply
+    unnecessary, mythology.
+  - The King is a very strong contender! Does his success lie in his unsettling stillness
+    or his enormous, vacant head?
   PlayerResponsesStrings1:
-  - I just don't care.
-  - I mean, I do, but not that much.
-  - I actually do care, but it's a stressful topic so I try to stay away.
+  - They should all be canceled. They set a terrible example for children.
+  - The mascots are okay, but I prefer the generic, cartoon food items. They're less
+    intrusive.
+  - Mascots are essential! They bring joy and brand recognition. Don't be such a
+    grinch.
   PlayerResponsesStrings2:
-  - The constant rule changes were frustrating.
-  - They never should have shut everything down.
-  - They didn't act fast enough to stop the spread.
+  - The ones with too much backstory are the worst. Just let me eat my fries in peace.
+  - "The best is the one who is least involved with the food, like the Wendy\u2019s
+    girl."
+  - The King's mysterious backstory is perfect. He is the perfect blend of royalty
+    and menace.
   PlayerResponsesStrings3:
-  - They distributed vaccines quickly.
-  - They tried to help the economy with stimulus checks.
-  - The leaders were just trying to follow the science.
+  - The King is a cheap gimmick. Ronald McDonald has a far more iconic and benevolent
+    legacy.
+  - The Colonel Sanders brand is the best. He's a real person who founded a genuine
+    empire.
+  - The King is a masterpiece of modern advertising! The unsettling silence perfectly
+    encapsulates fast-food existential dread.

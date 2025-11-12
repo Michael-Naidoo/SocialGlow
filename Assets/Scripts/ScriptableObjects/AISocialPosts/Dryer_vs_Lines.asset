@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postID: 0004
   postText: Drying Machines are so much better than washing lines, they more than
-    make up for the seemingly unessesary cost of using it by its ease off use.
+    make up for the seemingly unessesary cost of using it by its ease of use.
   themeTag: '"Washing"'
   relatedTopic: '"Clothes", "Machines"'

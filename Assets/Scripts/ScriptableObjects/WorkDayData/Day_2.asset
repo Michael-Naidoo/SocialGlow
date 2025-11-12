@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d68d0da6ba4f9fbeeebe497b5ba720, type: 3}
+  m_Name: Day_2
+  m_EditorClassIdentifier: 
+  dayNumber: 2
+  dailyTheme: '"Food"'
+  dailyPosts:
+  - {fileID: 11400000, guid: 4df4a65894e55ba42b6421bec9ddc0be, type: 2}
+  - {fileID: 11400000, guid: a07a0eb19c8a15449b756dd51323cbf9, type: 2}
+  - {fileID: 11400000, guid: 185ae1ee0770ed24c9f541545b7d2df0, type: 2}
+  workNPCName: Mina
+  npcOpeningDialogue: Oh hey friend, hope you've been doing well! I just got my morning
+    Ice Matcha with extra vanilla syrup, sweet and earthy! Want some?
+  choiceOptions:
+  - choiceText: Sure, let me have a try!
+    effect:
+      socialChange: 6
+      professionalChange: -4
+      isNeutralChoice: 0
+    followUpComment: Good to see that we have similar tastes
+  - choiceText: Nah, the report's say Coffee keeps you awake longer.
+    effect:
+      socialChange: -3
+      professionalChange: 7
+      isNeutralChoice: 0
+    followUpComment: Oh, okay, you do you.
+  townNPCName: Liam
+  townNPCDialogue: Oh, you looking for something to eat, we have Kale on sale for
+    20%!
+  townChoiceOptions:
+  - choiceText: No, thank you
+    effect:
+      socialChange: -3
+      professionalChange: -1
+      isNeutralChoice: 0
+    followUpComment: You're missing out.
+  - choiceText: I already have Kale so I'm good
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Oh, okay, hopefully you come again
+  - choiceText: Absolutely, that would be amazing!
+    effect:
+      socialChange: 4
+      professionalChange: 2
+      isNeutralChoice: 0
+    followUpComment: Great, thank you for shopping!
+  billboardText: 
+  vendorDialogue: 

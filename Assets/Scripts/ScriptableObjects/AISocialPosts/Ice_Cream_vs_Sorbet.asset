@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d012ba0bbe44b498cc7c8afb377bc13, type: 3}
+  m_Name: Ice_Cream_vs_Sorbet
+  m_EditorClassIdentifier: 
+  postID: 0008
+  postText: 'Hot Take: Sorbet is miles better than Ice Cream, I don''t care what
+    people think it''s better PERIOD!'
+  themeTag: '"Food"'
+  relatedTopic: '"Dessert" "Summer"'

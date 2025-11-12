@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
     
     private SocialMediaPanel socialMediaPanel; // Add this private variable at the top
     private ComputerTrigger computerTrigger; // Add this private variable at the top
+    
+    //Area Parents
+    GameObject roomParent;
+    GameObject workParent;
+    GameObject townParent;
 
 
     private void Awake()
@@ -58,6 +63,11 @@ public class GameManager : MonoBehaviour
             // Keep the GameManager across scene loads
             DontDestroyOnLoad(gameObject);
         }
+        roomParent = GameObject.FindGameObjectWithTag("Room");
+        workParent = GameObject.FindGameObjectWithTag("Work");
+        townParent = GameObject.FindGameObjectWithTag("Town");
+        workParent.SetActive(false);
+        townParent.SetActive(false);
     }
 
     private void Start()
@@ -115,6 +125,9 @@ public class GameManager : MonoBehaviour
         {
             computerTrigger.ResetTrigger();
         }
+        
+        townParent.SetActive(false);
+        roomParent.SetActive(true);
         // e.g., Show UI prompt to go to the computer
         // UI.ShowPrompt("Time to check the 'Glow' feed!");
     }
@@ -147,11 +160,15 @@ public class GameManager : MonoBehaviour
     
     private void HandleWorkMovement()
     {
+        roomParent.SetActive(false);
+        workParent.SetActive(true);
         // In this state, the player can use point-and-click movement.
         // The ClickToMove script should check if (GameManager.Instance.CurrentState == GameState.WorkPhase_Movement)
     }
     private void HandleTownMovement()
     {
+        workParent.SetActive(false);
+        townParent.SetActive(true);
         workDialogueComplete = true;
         Debug.Log(workDialogueComplete);
         // In this state, the player can use point-and-click movement.

@@ -9,7 +9,8 @@ public class NPCInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DialogueManager dm = FindObjectOfType<DialogueManager>(true);
-            if (dm != null)
+            if (dm != null 
+                && GameManager.Instance.CurrentState is GameState.TownPhase_Movement or GameState.WorkPhase_Movement)
             {
                 // Stop player movement
                 // ClickToMove.StopMovement(); 

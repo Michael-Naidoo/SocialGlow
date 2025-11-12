@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 1. Define the possible states for the game loop
 public enum GameState
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Flow")]
     [SerializeField] private GameState currentState = GameState.InRoom_Start;
     [SerializeField] private int currentDay = 1;
+    public bool workDialogueComplete;
 
     // Public getters for other scripts
     public float SocialStatus => socialStatus;
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
     public GameState CurrentState => currentState;
     
     private SocialMediaPanel socialMediaPanel; // Add this private variable at the top
+    private ComputerTrigger computerTrigger; // Add this private variable at the top
 
 
     private void Awake()
@@ -81,6 +84,13 @@ public class GameManager : MonoBehaviour
             case GameState.WorkPhase_Movement:
                 HandleWorkMovement();
                 break;
+            case GameState.WorkPhase_Dialogue:
+                break;
+            case GameState.TownPhase_Movement:
+                HandleTownMovement();
+                break;
+            case GameState.TownPhase_Dialogue:
+                break;
             case GameState.InRoom_End:
                 HandleInRoomEnd();
                 break;
@@ -96,6 +106,15 @@ public class GameManager : MonoBehaviour
     private void HandleInRoomStart()
     {
         Debug.Log($"Day {currentDay} begins!");
+        if (computerTrigger == null)
+        {
+            computerTrigger = FindObjectOfType<ComputerTrigger>();
+        }
+
+        if (computerTrigger != null)
+        {
+            computerTrigger.ResetTrigger();
+        }
         // e.g., Show UI prompt to go to the computer
         // UI.ShowPrompt("Time to check the 'Glow' feed!");
     }
@@ -131,9 +150,17 @@ public class GameManager : MonoBehaviour
         // In this state, the player can use point-and-click movement.
         // The ClickToMove script should check if (GameManager.Instance.CurrentState == GameState.WorkPhase_Movement)
     }
+    private void HandleTownMovement()
+    {
+        workDialogueComplete = true;
+        Debug.Log(workDialogueComplete);
+        // In this state, the player can use point-and-click movement.
+        // The ClickToMove script should check if (GameManager.Instance.CurrentState == GameState.TownPhase_Movement)
+    }
 
     private void HandleInRoomEnd()
     {
+        workDialogueComplete = false;
         currentDay++;
         // Check for loss condition
         if (socialStatus < minStatusToLose || professionalStatus < minStatusToLose)
@@ -150,6 +177,7 @@ public class GameManager : MonoBehaviour
     private void HandleGameOver()
     {
         Debug.Log("Game Over! Your status fell too low.");
+        SceneManager.LoadScene("GameOver");
         // e.g., Load the Game Over screen
         // SceneLoader.LoadGameOverScreen();
     }

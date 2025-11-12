@@ -28,19 +28,34 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("Failed to load current day data for dialogue.");
             return;
         }
-
         // 2. Set the initial state
-        GameManager.Instance.UpdateGameState(GameState.WorkPhase_Dialogue);
+        if (!GameManager.Instance.workDialogueComplete)
+        {
+            GameManager.Instance.UpdateGameState(GameState.WorkPhase_Dialogue);
+        }
+        else
+        {
+            GameManager.Instance.UpdateGameState(GameState.TownPhase_Dialogue);
+        }
         dialoguePanel.SetActive(true);
         currentChoiceIndex = 0;
         
         // 3. Display the opening dialogue
-        npcNameText.text = currentDayData.workNPCName;
-        dialogueText.text = currentDayData.npcOpeningDialogue;
-        
-        // Use all choice options defined in the WorkDayData
-        currentChoices = currentDayData.choiceOptions;
-        
+        if (!GameManager.Instance.workDialogueComplete)
+        {
+            npcNameText.text = currentDayData.workNPCName;
+            dialogueText.text = currentDayData.npcOpeningDialogue;
+            // Use all choice options defined in the WorkDayData
+            currentChoices = currentDayData.choiceOptions;
+        }
+        else
+        {
+            npcNameText.text = currentDayData.townNPCName;
+            dialogueText.text = currentDayData.townNPCDialogue;
+            // Use all choice options defined in the WorkDayData
+            currentChoices = currentDayData.townChoiceOptions;
+        }
+
         // 4. Show the first set of choices
         DisplayChoices(currentChoiceIndex);
     }
@@ -62,8 +77,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         
-        // Only display 2 choices per phase (index and index + 1)
-        for (int i = index; i < index + 2 && i < currentChoices.Count; i++)
+        // Only display 3 choices per phase (index, index + 1 and index + 2)
+        for (int i = index; i < index + 3 && i < currentChoices.Count; i++)
         {
             ConversationChoice choice = currentChoices[i];
             
@@ -99,7 +114,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // 2. Display the player's follow-up comment and hide buttons temporarily
-        dialogueText.text = $"**You:** {choice.followUpComment}\n\n[NPC response here]"; 
+        dialogueText.text = $"**You:** {choice.choiceText}\n\n{choice.followUpComment}"; 
         
         // Temporarily clear buttons after a choice
         foreach (Transform child in choiceButtonsParent)
@@ -108,7 +123,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // 3. Wait briefly, then advance to the next set of choices
-        currentChoiceIndex += 2; // Move past the pair of choices just presented
+        currentChoiceIndex += 3; // Move past the pair of choices just presented
         Invoke("AdvanceConversation", 2f); // Simple delay for player to read response
     }
     
@@ -126,6 +141,13 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Dialogue finished. Transitioning to Town Phase.");
 
         // Transition the game to the next state
-        GameManager.Instance.UpdateGameState(GameState.TownPhase_Movement);
+        if (!GameManager.Instance.workDialogueComplete)
+        {
+            GameManager.Instance.UpdateGameState(GameState.TownPhase_Movement);
+        }
+        else
+        {
+            GameManager.Instance.UpdateGameState(GameState.InRoom_End);
+        }
     }
 }

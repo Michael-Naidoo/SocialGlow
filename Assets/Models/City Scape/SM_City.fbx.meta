@@ -9,6 +9,86 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: M_Basic Building
     second: {fileID: 2100000, guid: b4b4fb9afbe7cf74fa87bb50cbc09be0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Basic Tower 1
+    second: {fileID: 2100000, guid: a9990b1d8ac62df4197c907670d7f5a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Basic Tower 2
+    second: {fileID: 2100000, guid: a9990b1d8ac62df4197c907670d7f5a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Basic Tower 3
+    second: {fileID: 2100000, guid: b51bc91dc94f16043ae4538ea81efe22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Basic_Building2
+    second: {fileID: 2100000, guid: 4ce08b30d1fa0e14a9144d1051d73145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Flat Building
+    second: {fileID: 2100000, guid: 2cee5f8713d300b43907346ce97a991c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Flat Corner Building
+    second: {fileID: 2100000, guid: 0df9c17547995214f802ce87539a40b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FlatCorner Building
+    second: {fileID: 2100000, guid: 0df9c17547995214f802ce87539a40b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_L Building
+    second: {fileID: 2100000, guid: 4ae00450dbe980642889911135906497, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Mart With Shade
+    second: {fileID: 2100000, guid: 3957e3173d4fbb9458dc667c32bc59d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Plus Tower
+    second: {fileID: 2100000, guid: ca5530dd3b287104093a0ce4f6b99939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pointed Tower
+    second: {fileID: 2100000, guid: ded7e73f516eb3b4abe20d927db005d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ridge Tower
+    second: {fileID: 2100000, guid: 06f4d6e5e6bffa64689724a6610f23ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Small Store
+    second: {fileID: 2100000, guid: e2bd6ff553423c9408dc49e543d51641, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Supermarket
+    second: {fileID: 2100000, guid: 516d86b39a222cb499179c2b3c325cb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Tower Without Point
+    second: {fileID: 2100000, guid: f31811c3f29a9594a8183e165127f2fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TowerWith Sign
+    second: {fileID: 2100000, guid: cd81a7318a4f9a94e8b55522f2435854, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

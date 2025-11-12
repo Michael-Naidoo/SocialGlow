@@ -9,7 +9,7 @@ public class ShredderComponent : MonoBehaviour
     
     private bool isShredding = false;
 
-    private void Start()
+    private void OnEnable()
     {
         printerTask = FindObjectOfType<ShredDocumentTask>();
     }

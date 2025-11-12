@@ -12,7 +12,7 @@ public class ShredDocumentTask : MonoBehaviour
     
     private bool documentPrinted = false;
 
-    private void Start()
+    private void OnEnable()
     {
         if (manager == null) manager = FindObjectOfType<WorkManager>();
         shredderComponent = FindObjectOfType<ShredderComponent>();

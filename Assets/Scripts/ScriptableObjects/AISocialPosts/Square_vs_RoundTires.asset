@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Square_vs_RoundTires
   m_EditorClassIdentifier: 
   postID: 0002
-  postText: '#SquareLives
+  postText: 'Square tires are clearly superior and should be the obvious choice for
+    drivers.
 
-    Square tires are clearly superior and should be the
-    obvious choice for drivers.'
+    #SquareLives'
   themeTag: '"Shape"'
   relatedTopic: '"Cars", "Tires", "Shapes"'

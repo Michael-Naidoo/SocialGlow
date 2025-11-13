@@ -44,18 +44,18 @@ MonoBehaviour:
   townNPCDialogue: Oh, you looking for something to eat, we have Kale on sale for
     20%!
   townChoiceOptions:
-  - choiceText: No, thank you
+  - choiceText: No, thank you.
     effect:
       socialChange: -3
       professionalChange: -1
       isNeutralChoice: 0
     followUpComment: You're missing out.
-  - choiceText: I already have Kale so I'm good
+  - choiceText: I already have Kale so I'm good.
     effect:
       socialChange: 0
       professionalChange: 0
       isNeutralChoice: 1
-    followUpComment: Oh, okay, hopefully you come again
+    followUpComment: Oh, okay, hopefully you come again.
   - choiceText: Absolutely, that would be amazing!
     effect:
       socialChange: 4

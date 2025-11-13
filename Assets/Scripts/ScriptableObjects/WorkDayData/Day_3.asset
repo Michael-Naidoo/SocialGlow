@@ -12,14 +12,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d68d0da6ba4f9fbeeebe497b5ba720, type: 3}
   m_Name: Day_3
   m_EditorClassIdentifier: 
-  dayNumber: 0
-  dailyTheme: 
-  dailyPosts: []
-  workNPCName: 
-  npcOpeningDialogue: 
-  choiceOptions: []
-  townNPCName: 
-  townNPCDialogue: 
-  townChoiceOptions: []
+  dayNumber: 3
+  dailyTheme: '"Lifestyle"'
+  dailyPosts:
+  - {fileID: 11400000, guid: 9b939677b2bf8c043a9364d4a5d66476, type: 2}
+  - {fileID: 11400000, guid: 1d6f87e2f7c1f3f45b94624db39e3f6c, type: 2}
+  - {fileID: 11400000, guid: a07a0eb19c8a15449b756dd51323cbf9, type: 2}
+  - {fileID: 11400000, guid: d7f15257be536bf4390230af8d3d4a8c, type: 2}
+  workNPCName: Precious
+  npcOpeningDialogue: Hey, hope you've been good. Looks like the higher ups have
+    decided to remove all the regular chairs and for metals ones. Not a fan of it,
+    they are kind of hard to sit on for a whole day.
+  choiceOptions:
+  - choiceText: Better for your posture, right!
+    effect:
+      socialChange: -3
+      professionalChange: 5
+      isNeutralChoice: 0
+    followUpComment: Not really, but...okay.
+  - choiceText: I know, we should ask to get pur old chairs back.
+    effect:
+      socialChange: 5
+      professionalChange: -5
+      isNeutralChoice: 0
+    followUpComment: At least I'm not the only one complaning.
+  - choiceText: Don't care either way, just need to get work done.
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Still dioesn't feel good...whatever.
+  townNPCName: Lydia
+  townNPCDialogue: Hey neighbour, I was just getting my laundry out of the Dryer,
+    most effecient way to do laundry, am I right?!
+  townChoiceOptions:
+  - choiceText: I prefer the washing line, suns more gentle on my clothes.
+    effect:
+      socialChange: 1
+      professionalChange: 3
+      isNeutralChoice: 0
+    followUpComment: But you lack effeciency.
+  - choiceText: YES!! Best think I could have done for myself.
+    effect:
+      socialChange: 4
+      professionalChange: 2
+      isNeutralChoice: 0
+    followUpComment: Haha, you get me!
   billboardText: 
   vendorDialogue: 

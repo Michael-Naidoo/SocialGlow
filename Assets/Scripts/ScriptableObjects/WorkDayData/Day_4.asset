@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d68d0da6ba4f9fbeeebe497b5ba720, type: 3}
+  m_Name: Day_4
+  m_EditorClassIdentifier: 
+  dayNumber: 4
+  dailyTheme: '"Media"'
+  dailyPosts:
+  - {fileID: 11400000, guid: 9b939677b2bf8c043a9364d4a5d66476, type: 2}
+  - {fileID: 11400000, guid: d3553f06ada1c7d4fb7eaf48efb7846c, type: 2}
+  - {fileID: 11400000, guid: e767ba3877f32494388ea8fc04c48f5f, type: 2}
+  workNPCName: Nicolas
+  npcOpeningDialogue: Morning. I just joined a running club, want to come sometime?
+  choiceOptions:
+  - choiceText: No thank you, how about a board game or two after your run.
+    effect:
+      socialChange: 5
+      professionalChange: -2
+      isNeutralChoice: 0
+    followUpComment: That's actually a good idea, see you then!
+  - choiceText: Running would be great actually, thanks!
+    effect:
+      socialChange: 6
+      professionalChange: 3
+      isNeutralChoice: 0
+    followUpComment: Great, will update you later!
+  - choiceText: Nah, not much of a runner.
+    effect:
+      socialChange: -4
+      professionalChange: -4
+      isNeutralChoice: 0
+    followUpComment: Makybe next time then.
+  townNPCName: Andreas
+  townNPCDialogue: Hey, you excited for the new Avatar card set, personally Earth
+    Nation slaps hard!
+  townChoiceOptions:
+  - choiceText: There is no war in Ba Sing Se.
+    effect:
+      socialChange: 9
+      professionalChange: 5
+      isNeutralChoice: 0
+    followUpComment: You get me!
+  - choiceText: But the Fire Nation is so badass.
+    effect:
+      socialChange: 4
+      professionalChange: 4
+      isNeutralChoice: 0
+    followUpComment: Then let's fight to see who's better!
+  - choiceText: Not much of a fan, personally.
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Go watch it sometime, you'll love it.
+  billboardText: 
+  vendorDialogue: 

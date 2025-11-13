@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Purple_vs_Gold
   m_EditorClassIdentifier: 
   postID: 0005
-  postText: '#Fashion
+  postText: 'Gold has become so overrated, Purple is the new big fashion statement.
 
-    Gold has become so overrated, Purple is the new big fashion
-    statement.'
+    #fashion'
   themeTag: '"Colour"'
   relatedTopic: '"Fashion"'

@@ -16,6 +16,7 @@ public class NPCInteraction : MonoBehaviour
                 // ClickToMove.StopMovement(); 
             
                 // Start the conversation
+                dm.NPC = gameObject;
                 dm.StartDialogue();
             }
         }

@@ -8,6 +8,20 @@ public class BuyDinnerTask : MonoBehaviour
     [SerializeField] private TownManager manager; 
     
     private bool isPlayerInZone = false;
+    
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
 
     private void Start()
     {
@@ -19,6 +33,7 @@ public class BuyDinnerTask : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ChangeIndicatorColor(0);
             isPlayerInZone = true;
             StartCoroutine(PerformTask());
         }
@@ -28,6 +43,7 @@ public class BuyDinnerTask : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ChangeIndicatorColor(1);
             isPlayerInZone = false;
             StopAllCoroutines(); 
             Debug.Log("Task interrupted: Player walked away from the vendor.");
@@ -48,6 +64,7 @@ public class BuyDinnerTask : MonoBehaviour
 
         if (isPlayerInZone)
         {
+            ChangeIndicatorColor(1);
             Debug.Log("Dinner acquired!");
             manager.TaskCompleted();
         }

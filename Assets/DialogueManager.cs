@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     private int currentChoiceIndex = 0;
     private List<ConversationChoice> currentChoices;
 
+    public GameObject NPC;
+
     // --- Initialization and Setup ---
     public void StartDialogue()
     {
@@ -137,6 +139,7 @@ public class DialogueManager : MonoBehaviour
     // --- End Dialogue ---
     private void EndDialogue()
     {
+        Destroy(NPC);
         dialoguePanel.SetActive(false);
         Debug.Log("Dialogue finished. Transitioning to Town Phase.");
 

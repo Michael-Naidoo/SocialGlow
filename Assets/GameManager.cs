@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     // --- Game State Tracking ---
     [Header("Game Flow")]
     [SerializeField] private GameState currentState = GameState.InRoom_Start;
-    [SerializeField] private int currentDay = 1;
+    public int currentDay = 1;
     public bool workDialogueComplete;
 
     // Public getters for other scripts
@@ -127,6 +127,8 @@ public class GameManager : MonoBehaviour
         
         townParent.SetActive(false);
         roomParent.SetActive(true);
+        
+        DayManager.Instance.SetDayData();
         // e.g., Show UI prompt to go to the computer
         // UI.ShowPrompt("Time to check the 'Glow' feed!");
     }

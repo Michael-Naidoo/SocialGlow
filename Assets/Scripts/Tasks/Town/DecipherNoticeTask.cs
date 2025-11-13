@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.ComponentModel;
 using TMPro;
 
 public class DecipherNoticeTask : MonoBehaviour
@@ -11,6 +12,20 @@ public class DecipherNoticeTask : MonoBehaviour
     [SerializeField] private Transform canvasParent; // Parent transform for the UI
     
     private bool isPlayerDeciphering = false;
+    
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
 
     private void Start()
     {
@@ -21,6 +36,7 @@ public class DecipherNoticeTask : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isPlayerDeciphering)
         {
+            ChangeIndicatorColor(0);
             isPlayerDeciphering = true;
             GameObject panel = Instantiate(uiPanelPrefab, canvasParent); 
             
@@ -38,6 +54,7 @@ public class DecipherNoticeTask : MonoBehaviour
     {
         if (other.CompareTag("Player") && isPlayerDeciphering)
         {
+            ChangeIndicatorColor(1);
             StopAllCoroutines(); 
             isPlayerDeciphering = false;
             Debug.Log("Deciphering interrupted. The jargon overload was too much.");
@@ -58,6 +75,7 @@ public class DecipherNoticeTask : MonoBehaviour
 
         if (isPlayerDeciphering)
         {
+            ChangeIndicatorColor(1);
             Destroy(panel);
             isPlayerDeciphering = false;
             Debug.Log("Notice fully understood: 'Consume more, question less.' Task Complete.");

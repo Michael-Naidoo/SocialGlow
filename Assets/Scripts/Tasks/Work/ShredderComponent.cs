@@ -9,6 +9,19 @@ public class ShredderComponent : MonoBehaviour
     
     private bool isShredding = false;
 
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
     private void OnEnable()
     {
         printerTask = FindObjectOfType<ShredDocumentTask>();
@@ -18,6 +31,7 @@ public class ShredderComponent : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isShredding && printerTask.gameObject.activeInHierarchy) 
         {
+            ChangeIndicatorColor(0);
             isShredding = true;
             StartCoroutine(ShredTask());
         }
@@ -34,6 +48,7 @@ public class ShredderComponent : MonoBehaviour
         // Tell the main task script that the whole job is done
         if (printerTask != null)
         {
+            ChangeIndicatorColor(1);
             printerTask.ShreddingComplete();
         }
     }

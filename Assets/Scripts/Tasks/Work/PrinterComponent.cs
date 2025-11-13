@@ -4,7 +4,7 @@ using UnityEngine;
 public class PrinterComponent : MonoBehaviour
 {
     [SerializeField] private PrintDocumentTask computerTask; // Link back to the main task script
-
+    
     private void OnEnable()
     {
         computerTask = FindFirstObjectByType<PrintDocumentTask>();

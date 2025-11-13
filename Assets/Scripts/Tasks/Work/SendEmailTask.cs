@@ -11,6 +11,19 @@ public class SendEmailTask : MonoBehaviour
     
     private bool isPlayerInZone = false;
 
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
     private void Start()
     {
         if (manager == null) manager = FindObjectOfType<WorkManager>();
@@ -21,6 +34,7 @@ public class SendEmailTask : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ChangeIndicatorColor(0);
             isPlayerInZone = true;
             StartCoroutine(PerformTask());
         }
@@ -30,6 +44,7 @@ public class SendEmailTask : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ChangeIndicatorColor(1);
             isPlayerInZone = false;
             StopAllCoroutines(); // Stop if the player leaves early
             Debug.Log("Task interrupted: Player left the computer.");
@@ -54,6 +69,7 @@ public class SendEmailTask : MonoBehaviour
 
         if (isPlayerInZone)
         {
+            ChangeIndicatorColor(1);
             Debug.Log("Email sent successfully!");
             manager.TaskCompleted();
         }

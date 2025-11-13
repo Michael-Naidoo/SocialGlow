@@ -9,6 +9,20 @@ public class ReadBillboardTask : MonoBehaviour
     [SerializeField] private Transform canvasParent; // Parent transform for the UI
     
     private bool hasReadToday = false;
+    
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
 
     private void Start()
     {
@@ -19,6 +33,7 @@ public class ReadBillboardTask : MonoBehaviour
     {
         if (other.CompareTag("Player") && !hasReadToday)
         {
+            ChangeIndicatorColor(0);
             Debug.Log("Player is reading the billboard.");
             hasReadToday = true;
             
@@ -41,6 +56,7 @@ public class ReadBillboardTask : MonoBehaviour
     private System.Collections.IEnumerator ClosePanelAfterDelay(GameObject panel)
     {
         yield return new WaitForSeconds(5f); // Player reads for 5 seconds
+        ChangeIndicatorColor(0);
         Destroy(panel);
         manager.TaskCompleted();
     }

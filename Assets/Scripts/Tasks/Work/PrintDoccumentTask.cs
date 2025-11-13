@@ -7,14 +7,27 @@ public class PrintDocumentTask : MonoBehaviour
     [SerializeField] private float preparationTime = 5f; // Time required at the computer
     
     [SerializeField] private WorkManager manager;
-    
+    [SerializeField] private PrinterComponent printer;
+
     private bool documentPrepared = false;
+
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
 
     private void OnEnable()
     {
         if (manager == null) manager = FindObjectOfType<WorkManager>();
-        PrinterComponent printer = FindFirstObjectByType<PrinterComponent>();
-        printerTrigger = printer.gameObject;
         
         if (printerTrigger == null) Debug.LogError("Printer Trigger not assigned!");
         
@@ -28,6 +41,7 @@ public class PrintDocumentTask : MonoBehaviour
         if (other.CompareTag("Player") && !documentPrepared)
         {
             // Start preparation timer coroutine
+            ChangeIndicatorColor(0);
             StartCoroutine(PrepareDocument(other.gameObject));
         }
     }
@@ -53,6 +67,7 @@ public class PrintDocumentTask : MonoBehaviour
     // Function called by the *separate* PrinterComponent when the document is collected
     public void PrintingComplete()
     {
+        ChangeIndicatorColor(1);
         documentPrepared = false; // Reset for the next day/task
         printerTrigger.SetActive(false); // Hide the printer trigger
         manager.TaskCompleted();

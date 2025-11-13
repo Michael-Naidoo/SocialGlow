@@ -12,11 +12,22 @@ public class ShredDocumentTask : MonoBehaviour
     
     private bool documentPrinted = false;
 
+    public Renderer indicator;
+
+    private void ChangeIndicatorColor(int color)
+    {
+        if (color == 0)
+        {
+            indicator.material.color = Color.red;
+        }
+        else
+        {
+            indicator.material.color = Color.green;
+        }
+    }
     private void OnEnable()
     {
         if (manager == null) manager = FindObjectOfType<WorkManager>();
-        shredderComponent = FindObjectOfType<ShredderComponent>();
-        shredderTrigger = shredderComponent.gameObject;
         if (shredderTrigger == null) Debug.LogError("Shredder Trigger not assigned!");
         
         // Ensure the shredder starts inactive or hidden
@@ -28,6 +39,7 @@ public class ShredDocumentTask : MonoBehaviour
     {
         if (other.CompareTag("Player") && !documentPrinted)
         {
+            ChangeIndicatorColor(0);
             Debug.Log("Document printed. Go to the shredder!");
             documentPrinted = true;
             
@@ -40,6 +52,7 @@ public class ShredDocumentTask : MonoBehaviour
     // Function called by a *separate* ShredderComponent on the shredderTrigger object
     public void ShreddingComplete()
     {
+        ChangeIndicatorColor(1);
         documentPrinted = false; // Reset for the next day/task
         shredderTrigger.SetActive(false); // Hide the shredder trigger
         manager.TaskCompleted();

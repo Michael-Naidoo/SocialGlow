@@ -42,6 +42,7 @@ public class DecipherNoticeTask : MonoBehaviour
             
             // Simplified: Assume the panel has a TextMeshPro component
             TextMeshProUGUI text = panel.GetComponentInChildren<TextMeshProUGUI>();
+            text.color = Color.black;
             if (text != null)
             {
                 text.text = "Deciphering mandatory public compliance notice... stay engaged.'";

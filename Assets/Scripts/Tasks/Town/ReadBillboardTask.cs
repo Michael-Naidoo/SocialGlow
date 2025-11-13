@@ -49,6 +49,7 @@ public class ReadBillboardTask : MonoBehaviour
             
             // Simplified: Assume the panel has a TextMeshPro component
             TextMeshProUGUI text = panel.GetComponentInChildren<TextMeshProUGUI>();
+            text.color = Color.black;
             if (text != null)
             {
                 text.text = "GlowNet AI Announcement: 'Civility Scores are up 3% this quarter. Keep glowing!'";

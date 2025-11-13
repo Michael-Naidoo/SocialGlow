@@ -34,6 +34,12 @@ MonoBehaviour:
       professionalChange: 7
       isNeutralChoice: 0
     followUpComment: Oh, okay, you do you.
+  - choiceText: Im not into caffinated stuff, but I wouldnt mind tasting it.
+    effect:
+      socialChange: 0
+      professionalChange: 0
+      isNeutralChoice: 1
+    followUpComment: Yes sure, hopefully this changes your mind.
   townNPCName: Liam
   townNPCDialogue: Oh, you looking for something to eat, we have Kale on sale for
     20%!

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ShredDocumentTask : MonoBehaviour
@@ -13,6 +14,7 @@ public class ShredDocumentTask : MonoBehaviour
     private bool documentPrinted = false;
 
     public Renderer indicator;
+    public TextMeshProUGUI countdown;
 
     private void ChangeIndicatorColor(int color)
     {
@@ -32,6 +34,7 @@ public class ShredDocumentTask : MonoBehaviour
         
         // Ensure the shredder starts inactive or hidden
         shredderTrigger.SetActive(false); 
+        countdown.text = "";
     }
 
     // Step 1: Player enters the Printer trigger
@@ -41,6 +44,7 @@ public class ShredDocumentTask : MonoBehaviour
         {
             ChangeIndicatorColor(0);
             Debug.Log("Document printed. Go to the shredder!");
+            countdown.text = "Document printed. Go to the shredder!";
             documentPrinted = true;
             
             // Activate the shredder trigger for the next step
@@ -52,6 +56,8 @@ public class ShredDocumentTask : MonoBehaviour
     // Function called by a *separate* ShredderComponent on the shredderTrigger object
     public void ShreddingComplete()
     {
+        
+        countdown.text = "";
         ChangeIndicatorColor(1);
         documentPrinted = false; // Reset for the next day/task
         shredderTrigger.SetActive(false); // Hide the shredder trigger

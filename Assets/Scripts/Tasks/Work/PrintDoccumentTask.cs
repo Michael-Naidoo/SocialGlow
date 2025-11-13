@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PrintDocumentTask : MonoBehaviour
@@ -12,6 +13,8 @@ public class PrintDocumentTask : MonoBehaviour
     private bool documentPrepared = false;
 
     public Renderer indicator;
+    
+    public TextMeshProUGUI countdown;
 
     private void ChangeIndicatorColor(int color)
     {
@@ -33,6 +36,7 @@ public class PrintDocumentTask : MonoBehaviour
         
         // Ensure the printer starts inactive
         printerTrigger.SetActive(false); 
+        countdown.text = "";
     }
 
     // Step 1: Player enters the Computer trigger to prepare
@@ -50,7 +54,7 @@ public class PrintDocumentTask : MonoBehaviour
     {
         Debug.Log("Preparing document for printing... stay put!");
         documentPrepared = true;
-        
+        countdown.text = "Preparing document for printing... stay put!";
         // Simple delay for preparation
         yield return new WaitForSeconds(preparationTime);
 
@@ -58,7 +62,7 @@ public class PrintDocumentTask : MonoBehaviour
         if (documentPrepared)
         {
             Debug.Log("Document ready to print. Go collect it at the printer!");
-            
+            countdown.text = "Document ready to print. Go collect it at the printer!";
             // Activate the next step's trigger
             printerTrigger.SetActive(true); 
         }
@@ -67,6 +71,7 @@ public class PrintDocumentTask : MonoBehaviour
     // Function called by the *separate* PrinterComponent when the document is collected
     public void PrintingComplete()
     {
+        countdown.text = "";
         ChangeIndicatorColor(1);
         documentPrepared = false; // Reset for the next day/task
         printerTrigger.SetActive(false); // Hide the printer trigger

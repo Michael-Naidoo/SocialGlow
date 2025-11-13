@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using TMPro;
 public class SendEmailTask : MonoBehaviour
 {
     [Header("Task Settings")]
@@ -12,6 +12,10 @@ public class SendEmailTask : MonoBehaviour
     private bool isPlayerInZone = false;
 
     public Renderer indicator;
+
+    public TextMeshProUGUI countdown;
+    
+    
 
     private void ChangeIndicatorColor(int color)
     {
@@ -26,6 +30,7 @@ public class SendEmailTask : MonoBehaviour
     }
     private void Start()
     {
+        countdown.text = "";
         if (manager == null) manager = FindObjectOfType<WorkManager>();
         if (manager == null) Debug.LogError("WorkManager not found for SendEmailTask!");
     }
@@ -46,6 +51,7 @@ public class SendEmailTask : MonoBehaviour
         {
             ChangeIndicatorColor(1);
             isPlayerInZone = false;
+            countdown.text = "";
             StopAllCoroutines(); // Stop if the player leaves early
             Debug.Log("Task interrupted: Player left the computer.");
         }
@@ -58,6 +64,7 @@ public class SendEmailTask : MonoBehaviour
 
         while (timer < timeRequired)
         {
+            countdown.text = $"{timeRequired - timer}";
             if (!isPlayerInZone) yield break; // Check again inside loop
             timer += Time.deltaTime;
             // Update a UI progress bar here 
@@ -70,6 +77,7 @@ public class SendEmailTask : MonoBehaviour
         if (isPlayerInZone)
         {
             ChangeIndicatorColor(1);
+            countdown.text = "";
             Debug.Log("Email sent successfully!");
             manager.TaskCompleted();
         }

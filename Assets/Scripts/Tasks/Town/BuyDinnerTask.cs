@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class BuyDinnerTask : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BuyDinnerTask : MonoBehaviour
     private bool isPlayerInZone = false;
     
     public Renderer indicator;
+    public TextMeshProUGUI countdown;
 
     private void ChangeIndicatorColor(int color)
     {
@@ -25,6 +27,7 @@ public class BuyDinnerTask : MonoBehaviour
 
     private void Start()
     {
+        countdown.text = "";
         if (manager == null) manager = FindObjectOfType<TownManager>();
         if (manager == null) Debug.LogError("TownManager not found for BuyDinnerTask!");
     }
@@ -43,6 +46,7 @@ public class BuyDinnerTask : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            countdown.text = "";
             ChangeIndicatorColor(1);
             isPlayerInZone = false;
             StopAllCoroutines(); 
@@ -57,6 +61,7 @@ public class BuyDinnerTask : MonoBehaviour
 
         while (timer < timeRequired)
         {
+            countdown.text = $"{timeRequired - timer}";
             if (!isPlayerInZone) yield break;
             timer += Time.deltaTime;
             yield return null;
@@ -64,6 +69,7 @@ public class BuyDinnerTask : MonoBehaviour
 
         if (isPlayerInZone)
         {
+            countdown.text = "";
             ChangeIndicatorColor(1);
             Debug.Log("Dinner acquired!");
             manager.TaskCompleted();

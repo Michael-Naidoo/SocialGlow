@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class ShredderComponent : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ShredderComponent : MonoBehaviour
     private bool isShredding = false;
 
     public Renderer indicator;
+    public TextMeshProUGUI countdown;
 
     private void ChangeIndicatorColor(int color)
     {
@@ -40,9 +42,14 @@ public class ShredderComponent : MonoBehaviour
     private IEnumerator ShredTask()
     {
         Debug.Log("Shredding document... wait...");
+        countdown.text = "Shredding document... wait...";
         yield return new WaitForSeconds(shredTime);
         
         Debug.Log("Document shredded!");
+        countdown.text = "Document shredded!";
+
+        yield return new WaitForSeconds(0.5f);
+        
         isShredding = false;
         
         // Tell the main task script that the whole job is done

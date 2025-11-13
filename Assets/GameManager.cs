@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             // Keep the GameManager across scene loads
-            DontDestroyOnLoad(gameObject);
         }
         roomParent = GameObject.FindGameObjectWithTag("Room");
         workParent = GameObject.FindGameObjectWithTag("Work");
@@ -194,6 +193,11 @@ public class GameManager : MonoBehaviour
     private void HandleGameOver()
     {
         Debug.Log("Game Over! Your status fell too low.");
+        
+        GameOverSceneManager gameOverSceneManager = GameOverSceneManager.Instance;
+        gameOverSceneManager.socialStatus = socialStatus;
+        gameOverSceneManager.professionalStatus = professionalStatus;
+        
         SceneManager.LoadScene("GameOver");
         // e.g., Load the Game Over screen
         // SceneLoader.LoadGameOverScreen();

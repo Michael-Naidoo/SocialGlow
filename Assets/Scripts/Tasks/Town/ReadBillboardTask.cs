@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro; // Assuming you are using TextMeshPro for UI
 
@@ -11,6 +12,11 @@ public class ReadBillboardTask : MonoBehaviour
     private bool hasReadToday = false;
     
     public Renderer indicator;
+
+    private void OnEnable()
+    {
+        hasReadToday = false;
+    }
 
     private void ChangeIndicatorColor(int color)
     {
@@ -56,7 +62,7 @@ public class ReadBillboardTask : MonoBehaviour
     private System.Collections.IEnumerator ClosePanelAfterDelay(GameObject panel)
     {
         yield return new WaitForSeconds(5f); // Player reads for 5 seconds
-        ChangeIndicatorColor(0);
+        ChangeIndicatorColor(1);
         Destroy(panel);
         manager.TaskCompleted();
     }

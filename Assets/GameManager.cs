@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
 
 // 1. Define the possible states for the game loop
@@ -180,6 +181,10 @@ public class GameManager : MonoBehaviour
     {
         workDialogueComplete = false;
         currentDay++;
+        if (currentDay > 4)
+        {
+            currentDay = 1;
+        }
         // Check for loss condition
         if (socialStatus < minStatusToLose || professionalStatus < minStatusToLose)
         {
